@@ -50,6 +50,7 @@ acl CONNECT method CONNECT
 # User Authentication
 auth_param basic program /usr/lib64/squid/basic_ncsa_auth /etc/squid/passwd
 auth_param basic realm Squid Proxy Server
+auth_param basic credentialsttl 12 hours
 acl authenticated proxy_auth REQUIRED
 http_access deny !authenticated
 
